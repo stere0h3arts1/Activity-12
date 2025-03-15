@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/HomePage.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="TangubPics/TangubCityLogo.png" alt="Logo" />
+      <!-- Replace with your logo -->
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="HistoryPage.html">History</a></li>
+        <li><a href="CitySeal.html">City Seal</a></li>
+        <li><a href="Tourism.html">Tourism</a></li>
+        <li><a href="CityOfficials.html">City Officials</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="tangubCityLogo">
+        <img
+          src="TangubPics/Masterhead_New_Logo-removebg-preview.png"
+          alt="Tangub City Logo"
+        />
+      </section>
+      <section class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <img src="TangubPics/AsensoTangubNew_Slide.png" alt="Slide 1" />
+          </div>
+          <div class="carousel-slide">
+            <img src="TangubPics/cover_photo_kkpp.png" alt="Slide 2" />
+          </div>
+          <div class="carousel-slide">
+            <img src="TangubPics/laaglaag1.jpg" alt="Slide 3" />
+          </div>
+          <div class="carousel-slide">
+            <img src="TangubPics/womensmthn_2025.jpg" alt="Slide 3" />
+          </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </section>
+
+      <section class="update-upcoming-events">
+        <h1 class="title-update">Tangub City Updates</h1>
+
+        <div class="container">
+          <div class="navbar-updates">
+            <a href="#">Latest Update</a>
+            <a href="#">Upcoming Events</a>
+          </div>
+
+          <div class="update">
+            <img
+              src="TangubPics/lastconcretpouring.jpg"
+              alt="Last Concrete Pouring"
+            />
+            <div>
+              <p>
+                <strong>Last Concrete Pouring at PRBP, Nagamalpunon</strong
+                ><br />
+                September 2, 2024 | Magpasagubong ang katwiran sa dakbayan human
+                ma blessingan ang mga bag-ong proyekto.
+              </p>
+            </div>
+          </div>
+
+          <div class="update">
+            <img
+              src="TangubPics/interbarangay.jpg"
+              alt="Inter Barangay Summer League"
+            />
+            <div>
+              <p>
+                <strong>Inter Barangay Summer League 2024, Guisad</strong><br />
+                April 13, 2024 | Tangub City will hold the Inter Barangay Summer
+                League 2024, at the People's Gymnasium.
+              </p>
+            </div>
+          </div>
+
+          <div class="update">
+            <img src="TangubPics/alcu_3.jpg" alt="TCGC Champion" />
+            <div>
+              <p>
+                <strong>TCGC Champion as ALCU X Games 2024</strong><br />
+                April 15, 2024 | Tangub City emerged as overall champion in the
+                recently concluded ALCU Games 2024.
+              </p>
+            </div>
+          </div>
+
+          <div class="update">
+            <img
+              src="TangubPics/Bag-ong_mga_sakyanan.png"
+              alt="Upcoming Event"
+            />
+            <div>
+              <p>
+                <strong
+                  >Bag-ong mga sakyanan sa LGU Tangub, gi Blessingan na</strong
+                ><br />
+                Date: September 2, 2024 | Magpasagubong ang katwiran sa dakbayan
+                human ma blessingan ang mga bag-ong proyekto.
+              </p>
+            </div>
+          </div>
+
+          <div class="update">
+            <img src="TangubPics/caravan_10.jpg" alt="Upcoming Event" />
+            <div>
+              <p>
+                <strong>Serbisyo Caravan Niarangkada na</strong><br />
+                Date: April 22, 2024 | Kauban ang nagkalain-lainng buhatan,
+                nagpahigayon ang Siyudad sa Tangub ug Serbisyo Caravan
+                kaniadtong Abril 25, 2024.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="currentEvents">
+        <h1 class="title-update">Current Events</h1>
+        <div class="container">
+          <img
+            class="titleYanongBalita"
+            src="TangubPics/YANONG BALITA.jpg"
+            alt=""
+          />
+
+          <ul class="issue-list">
+            <li>
+              <a href="#">November 23 - December 1, 2024 | Issue No. 24</a>
+            </li>
+            <li><a href="#">November 18 - 22, 2024 | Issue No. 23</a></li>
+            <li><a href="#">November 11 - 17, 2024 | Issue No. 22</a></li>
+            <li><a href="#">October 1 - 10, 2024 | Issue No. 21</a></li>
+            <li><a href="#">October 23 - 30, 2024 | Issue No. 20</a></li>
+            <li><a href="#">October 12 - 21, 2024 | Issue No. 19</a></li>
+            <li><a href="#">October 1 - 11, 2024 | Issue No. 18</a></li>
+          </ul>
+
+          <div class="footer">Unang araw, Ginoo. 2023</div>
+        </div>
+      </section>
+
+      <!-- Carousel Script -->
+      <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          const slides = document.querySelectorAll(".carousel-slide");
+          if (index >= slides.length) {
+            currentSlide = 0;
+          } else if (index < 0) {
+            currentSlide = slides.length - 1;
+          } else {
+            currentSlide = index;
+          }
+          const offset = -currentSlide * 100;
+          document.querySelector(
+            ".carousel-container"
+          ).style.transform = `translateX(${offset}%)`;
+        }
+
+        function moveSlide(step) {
+          showSlide(currentSlide + step);
+        }
+
+        // Auto slide
+        setInterval(() => {
+          moveSlide(1);
+        }, 3000);
+      </script>
+    </main>
+
+    <!-- Navigation Script -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active"); // Toggle active class to show/hide links
+      });
+    </script>
+  </body>
+</html>
