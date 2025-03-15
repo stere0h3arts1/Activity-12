@@ -1,0 +1,115 @@
+header h1 {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+div p {
+  margin: 0;
+  padding: 0;
+}
+
+.youtubeLink {
+  background-color: rgb(240, 222, 222);
+  width: 213px;
+  border-radius: 10px;
+}
+
+.youtubeLink img {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px;
+  width: 50px;
+  height: 40px;
+  margin: -10px -20px -10px -18px;
+}
+
+.youtube {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0 2px;
+}
+
+.youtubeLink .logo {
+  margin-left: -15px;
+}
+
+.youtubeLink-SnowWhite {
+  background-color: rgb(240, 222, 222);
+  width: 423px;
+  border-radius: 10px;
+}
+
+.youtubeLink-SnowWhite img {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px;
+  width: 50px;
+  height: 40px;
+  margin: -10px -20px -10px -18px;
+}
+
+.youtubeLink-Havoc {
+  background-color: rgb(240, 222, 222);
+  width: 409px;
+  border-radius: 10px;
+}
+
+.youtubeLink-Havoc img {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px;
+  width: 50px;
+  height: 40px;
+  margin: -10px -20px -10px -18px;
+}
+
+.youtubeLink-Opus {
+  background-color: rgb(240, 222, 222);
+  width: 232px;
+  border-radius: 10px;
+}
+
+.youtubeLink-Opus img {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px;
+  width: 50px;
+  height: 40px;
+  margin: -10px -20px -10px -18px;
+}
+
+.youtubeLink-RoundTheDecay {
+  background-color: rgb(240, 222, 222);
+  width: 257px;
+  border-radius: 10px;
+}
+
+.youtubeLink-RoundTheDecay img {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px;
+  width: 50px;
+  height: 40px;
+  margin: -10px -20px -10px -18px;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}

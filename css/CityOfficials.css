@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("../TangubPics/HAR_7368.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  background-color: #ff4c4c; /* Red background */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+.navbar img {
+  height: 50px; /* Adjust logo size */
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
+  margin: 0 15px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white; /* Text color */
+  font-weight: bold;
+  font-size: 16px;
+}
+.navbar ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.header {
+  background-color: #fa6403;
+  color: white;
+  padding: 5px 0;
+  text-align: left;
+  margin: 10px 50px;
+}
+
+.header-officials {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+}
+.officials {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Space between items */
+}
+.official {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Fixed width for uniformity */
+}
+.official img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+.name {
+  font-weight: bold;
+  margin: 10px 0;
+}
+.position {
+  font-style: italic;
+  margin: 5px 0;
+}
+.committee {
+  margin: 10px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.official-mayor {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Fixed width for uniformity */
+  height: 350px;
+  grid-column: span 3;
+  justify-self: center; /* Center the item */
+}
+
+.official-mayor img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+.official-mayor .name {
+  font-weight: bold;
+  margin: 10px 0;
+}
+.official-mayor .position {
+  font-style: italic;
+  margin: 5px 0;
+}
+.official-mayor .committee {
+  margin: 10px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.official-vice-mayor {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Fixed width for uniformity */
+  height: 350px;
+  grid-column: span 3;
+  justify-self: center; /* Center the item */
+}
+
+.official-vice-mayor img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+.official-vice-mayor .name {
+  font-weight: bold;
+  margin: 10px 0;
+}
+.official-vice-mayor .position {
+  font-style: italic;
+  margin: 5px 0;
+}
+.official-vice-mayor .committee {
+  margin: 10px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar ul {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar ul.active {
+    display: flex; /* Show links when active */
+  }
+  .navbar ul li {
+    margin: 10px 0; /* Vertical spacing for links */
+  }
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+  .tangubCityLogo {
+    align-self: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .header {
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-size: 2em; /* Smaller title on mobile */
+  }
+
+  .container,
+  .officials {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  .official,
+  .official-mayor,
+  .official-vice-mayor {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Adjust height */
+  }
+}
